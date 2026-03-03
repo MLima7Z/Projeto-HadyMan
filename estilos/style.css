@@ -1,0 +1,370 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: hameto;
+    src: url('/fontes/rammettoone-regularr.ttf');
+}
+@font-face {
+    font-family: arimo;
+    src: url('/fontes/arimo.ttf')
+}
+html {
+    background-color: black;
+}
+body {
+    font-size: 62.5%;
+    background-color: white;
+    padding-top: 4rem;
+    font-family: arimo;
+}
+header {
+    background-color: white;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+header > h2 {
+    font-size: 1.2rem;
+    margin: -0.4rem;
+    font-family: hameto;
+    color: #4587E9;
+}
+nav {
+    padding: 0.4rem;
+    margin: -0.4rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+a > img {
+    width: 35px;
+    height: 35px;
+}
+a > img:hover {
+    scale: 1.1;
+    transition-duration: 0.5s;
+}
+main {
+    background-color: #EAEAEA;
+}
+.hero {
+    background-image: linear-gradient(to bottom, #4587E9, #376EC1);
+    min-height: 80vh;
+    padding: 2.4rem;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: flex-start;
+}
+.hero > h2 {
+    font-family: hameto;
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+    color: white;
+    flex: 0 1 1.2rem;
+    animation: slide4 1.5s ease forwards;
+}
+.hero > h1 {
+    font-family: hameto;
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+    color: white;
+    flex: 1 1 2.6rem;
+    animation: slide3 1.5s ease forwards;
+}
+.services {
+    background-color: #EAEAEA;
+    padding-top: 1.6rem;
+    display: flex;
+    flex-flow: wrap column;
+}
+.services > h2 {
+    font-size: 2.4rem;
+    font-family: hameto;
+    padding-left: 2.4rem;
+    flex: 1 1;
+}
+.services > article {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    margin-left: 2.6rem;
+    margin-right: 2.6rem;
+    padding: 0.8rem;
+    background-color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    gap: 15px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px #00000052;
+    flex: 1 1;
+}
+.services > article > h3 {
+    font-family: hameto;
+}
+.services > article > p {
+    margin: 0.4rem;
+    margin-bottom: 0.8rem;
+}
+.services > article > img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 100px;
+    border: 5px solid #45E9A7;
+}
+.services > article > img:hover {
+    animation: slide5 0.5s ease forwards;
+    margin: 0.4rem;
+    transition-duration: 0.5s;
+}
+.cara {
+    background-color: white;
+}
+.more {
+    background-image: linear-gradient(to top, #4587E9, #376EC1);
+    font-size: 1.2rem;
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+    color: white;
+}
+.more > h2 {
+    font-size: 2.4rem;
+    padding-left: 1.6rem;
+    padding-bottom: 0.2rem;
+}
+.more > p {
+    padding-left: 2.8rem;
+    padding-right: 2.8rem;
+}
+#back {
+    background-image: linear-gradient(to bottom, #4587E9, #376EC1);
+}
+#back > h2 {
+    padding-bottom: 0.4rem;
+}
+.faq {
+    background-image: linear-gradient(to bottom, #EAEAEA, #E3E3E3); 
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+    display: flex;
+    flex-flow: wrap column;
+    font-size: 1.2rem;
+}
+.faq > h2 {
+    font-size: 2.4rem;
+    padding-left: 1.6rem;
+    padding-bottom: 0.2rem;
+}
+.ask {
+    font-family: arimo;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    margin-left: 1.6rem;
+    margin-right: 1.4rem;
+    background-color: white;
+    padding: 0.8rem;
+    border-radius: 15px;
+    border: 3px solid #376EC1;
+    flex: 1 1;
+
+}
+.askq {
+    display: none;
+    animation: slide 0.5s ease forwards;
+}
+.ask.active .askq {
+    display: block;
+    text-shadow: 5px 5px 20px #0000008A;
+}
+.ask > h3 {
+    margin-bottom: 0.4rem;
+    font-size: 1.8rem;
+}
+.cta {
+    background-image: linear-gradient(to top, #EAEAEA, #E3E3E3); 
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    text-align: center;
+    display: flex;
+    flex-flow: wrap column;
+}
+.cta > h2 {
+    font-family: hameto;
+}
+#buttomw {
+    background-image: linear-gradient(to bottom, #40E55E, #2ACA47);
+    padding: 1.2rem;
+    margin-top: 0.8rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    margin-bottom: 0.4rem;
+    border-radius: 50px;
+    border: 5px solid #F9F9F9;
+    font-weight: bolder;
+    color: white;
+    text-decoration: none;
+    flex: 1 1 50px;
+    font-size: 1.2rem;
+}
+.cta > p {
+    font-weight: bold;
+}
+#buttomi {
+    background-image: linear-gradient(to bottom, #901AFF, #EE1BE7, #FF424C, #FF8921, #FFC500);
+    padding: 1.2rem;
+    margin-top: 0.4rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    border-radius: 50px;
+    border: 5px solid #F9F9F9;
+    font-weight: bolder;
+    color: white;
+    text-decoration: none;
+    flex: 1 1 50px;
+}
+.menu {
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0.4rem;
+    display: none;
+    background-color: #376EC1;
+    padding: 0.8rem;
+    margin: auto;
+    border: 2px solid #000000;
+    margin-bottom: 0.4rem;
+    animation: slide2 0.5s ease forwards;
+}
+.e {
+    display: flex;
+    flex-flow: wrap column;
+    gap: 10px;
+}
+.menu.active {
+    display: block;
+    margin-bottom: 0.8rem;
+}
+.e > a {
+    color: white;
+    text-decoration: none;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0.4rem;
+    border-bottom: 1px solid #000000;
+}
+hr {
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+}
+footer {
+    font-size: 1.2rem;
+    padding: 1.6rem;
+    background-color: #1E1F19;
+    color: white;
+}
+footer > h2 {
+    margin-bottom: 0.8rem;
+    font-family: hameto;
+}
+footer > p {
+    margin-bottom: 0.4rem;
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .services {
+        flex-flow: row wrap;
+    }
+    .services > h2 {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+    .services > article {
+        flex: 1 1 30%;
+        max-width: 420px;
+    }
+    .services > .repar {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+    .menu {
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0.4rem;
+    display: none;
+    background-color: #376EC1;
+    padding: 0.8rem;
+    border: 2px solid #000000;
+    margin-bottom: 0.4rem;
+}
+}
+@media screen and (min-width: 993px) {
+    .services {
+        flex-flow: row wrap;
+        gap: 15px;
+    }
+  .services > article {
+    flex: 1 1 60%;
+    max-width: 380px;
+  }
+  .services {
+        flex-flow: row wrap;
+    }
+    .services > h2 {
+    flex: 1 1 100%;
+    text-align: center;
+}
+.services > .repar {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+.menu {
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0.4rem;
+    display: none;
+    background-color: #376EC1;
+    padding: 0.8rem;
+    border: 2px solid #000000;
+    margin-bottom: 0.4rem;
+}
+}
+@keyframes slide {
+    0% {transform: translateY(-20px);}
+    100% {transform: translateY(0px);}
+}
+@keyframes slide2 {
+    0% {transform: translateY(10px);}
+    100% {transform: translateY(0px);}
+}
+@keyframes slide3 {
+    0% {transform: 
+    translateY(40px);
+    opacity: 0;
+    }
+    100% {transform: 
+    translateY(0px);
+    opacity: 1;
+    }
+}
+@keyframes slide4 {
+    0% {transform: 
+    translateX(-200px);
+    opacity: 0;
+    }
+    100% {transform: 
+    translateX(0px);
+    opacity: 1;
+    }
+}
+@keyframes slide5 {
+    0% {transform: translateY(0px);}
+    100% {
+        transform: translateY(-5px);
+        scale: 1.1;
+    }
+}
