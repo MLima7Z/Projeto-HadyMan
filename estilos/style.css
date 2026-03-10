@@ -37,6 +37,7 @@ header > h2 {
     margin: -0.4rem;
     font-family: hameto;
     color: #4587E9;
+    flex: 1 1;
 }
 nav {
     padding: 0.4rem;
