@@ -19,10 +19,10 @@
       
       const service = link.dataset.service
       
-      const message = `Hi, I'm looking for ${service} services, are you available?`
+      const message = `Olá, eu quero um serviço de ${service}, quando vocês estariam disponíveis?`
       
       const encodedMessage = encodeURIComponent(message)
-      const phone = '55999999999'
+      const phone = '5575982856979'
       const url = `https://wa.me/${phone}?text=${encodedMessage}`
 
     window.open(url, '_blank')
